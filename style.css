@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+:root {
+  --normal: rgb(168, 168, 120, 0.3);
+  --fire: rgb(240, 128, 48, 0.3);
+  --water: rgb(104, 144, 240, 0.3);
+  --grass: rgb(120, 200, 80, 0.3);
+  --electric: rgb(5, 5, 5, 0.3);
+  --ice: rgb(152, 216, 216, 0.3);
+  --fighting: rgb(192, 48, 40, 0.3);
+  --poison: rgb(160, 64, 160, 0.3);
+  --ground: rgb(224, 192, 104, 0.3);
+  --flying: rgb(168, 144, 240, 0.3);
+  --psychic: rgb(248, 88, 136, 0.3);
+  --bug: rgb(168, 184, 32, 0.3);
+  --rock: rgb(184, 160, 56, 0.3);
+  --ghost: rgb(112, 88, 152, 0.3);
+  --dragon: rgb(112, 56, 248, 0.3);
+  --fairy: rgba(255, 52, 245, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* background: rgb(255, 250, 255); */
+  background: #efefbb;
+  background: linear-gradient(to right, #d4d3dd, #ffffe9);
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  letter-spacing: 3px;
+}
+
+.pokedex-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  height: 225px;
+  width: 150px;
+
+  z-index: -2;
+  border-radius: 15px;
+  margin: 10px;
+  box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.avatar img {
+  width: 100px;
+  height: 100px;
+}
+
+.circle {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.content {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.number,
+.name,
+.type {
+  margin: 10px 0;
+}
+
+.number {
+  background-color: rgba(0, 0, 0, 0.2);
+  display: inline;
+  border-radius: 10px;
+  padding: 3px 5px;
+  font-size: 12px;
+}
+
+.name,
+.number,
+.type {
+  font-weight: bold;
+}
+
+.name {
+  letter-spacing: 1px;
+}
+
+.name::first-letter {
+  text-transform: uppercase;
+}
+
+.type {
+  font-size: 11px;
+}
